@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Crop recommendation using ML</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+  <h1>Crop Recommendation Tool</h1>
+  <p>Use this tool to get recommendations for crops based on specific environmental conditions.</p>
+
+ </div>
+<div class="one">
+  <h2>{{ OUTPUT }}</h2>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+      <input  name="nitrogen" placeholder="Nitrogen" required>
+      <input  name="phosphorus" placeholder="Phosphorus" required>
+      <input  name="potassium" placeholder="Potassium" required>
+      <input  name="temperature" placeholder="Temperature" required>
+      <input name="humidity" placeholder="Humidity" required>
+      <input  name="ph" placeholder="PH" required>
+      <input  name="rainfall" placeholder="Rainfall" required><br>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+
+  </div>
+
+
+
+
+</body>
+</html>
