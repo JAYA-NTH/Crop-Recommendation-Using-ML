@@ -1,4 +1,7 @@
 🌾 Crop Recommendation System using ML
+
+
+
 📌 Project Overview
 This is a crop recommendation system designed to suggest the most suitable crops based on environmental and soil conditions. It helps farmers make informed planting decisions by analyzing these factors:
 
@@ -11,6 +14,9 @@ Rainfall
 pH value
 
 The recommendation engine is powered by a Random Forest Classifier trained on crop data, and is served through a Flask backend with an HTML/CSS frontend.
+
+
+
 ✨ Features
 -Accepts key soil and climate parameters (N, P, K, temperature, humidity, rainfall, pH).
 -Predicts the optimal crop using Random Forest Classifier.
